@@ -9,8 +9,10 @@ all:
 	gcc -o opmsg opmsg.c
 	gcc -o server server.c
 	gcc -o client client.c
+	gcc -o writer -I./ writer.c
+	gcc -o reader -I./ reader.c
 
 
 clean:
-	rm -rf pipe dual_pipe procread procwrite ftok sendmsg rcvmsg opmsg server client
+	rm -rf pipe dual_pipe procread procwrite ftok sendmsg rcvmsg opmsg server client writer reader
 
